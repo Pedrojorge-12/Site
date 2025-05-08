@@ -108,8 +108,12 @@ nav a:hover::after {
   }
 
   h1 {
-    font-size: 20px;
-    line-height: 30px
+    font-size: 30px;
+    line-height: 35px
+  }
+
+  .hero {
+  font-size: 12px;
   }
 }
 
@@ -194,15 +198,19 @@ nav a:hover::after {
 
 /* Responsivo para tablets e celulares */
 @media (max-width: 768px) {
+  .carousel-title {
+    font-size: 25px;
+  }
+
   .carousel-track img {
-    height: 40px;
+    height: 100px;
     margin: 0 15px;
   }
 }
 
 @media (max-width: 480px) {
   .carousel-track img {
-    height: 30px;
+    height: 80px;
     margin: 0 10px;
   }
 }
@@ -216,6 +224,8 @@ nav a:hover::after {
     transform: translateX(-50%);
   }
 }
+
+
 
 
   .hero {
