@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Representações | Rede Licitações</title>
+  <link rel="icon" type="image/png" href="img/logoEmpresas/rede (3).png">
+  <link rel="stylesheet" href="representacao.css" />
+</head>
+<body>
+
+  <header>
+    <div class="logo-container">
+      <a href="../index.html" style="text-decoration: none; color: inherit; display: inline-block;">
+        <img src="../img/logoAzul.png" alt="logo" class="logo-img" />
+        <div class="text-container">
+          <h1>Rede Licitações</h1>
+        </a>
+        <h4>Conquiste mais licitações, preocupe-se menos.</h4>
+      </div>
+  
+      <!-- Botão do menu hamburguer -->
+      <button class="menu-toggle" aria-label="Abrir Menu">&#9776;</button>
+    </div>
+  
+    <!-- Menu de navegação -->
+    <nav class="nav-menu">
+      <a href="../index.html">Início</a>
+      <a href="../sobreNos.html">Sobre</a>
+      <a href="../servicos.html">Serviços</a>
+      <a href="../contato.html">Contato</a>
+    </nav>
+    <script>
+      const toggle = document.querySelector('.menu-toggle');
+      const navMenu = document.querySelector('.nav-menu');
+    
+      toggle.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+      });
+    </script>
+  </header>
+
+<main class="container">
+
+  <section class="card1">
+    <h2 class="cor">Representações Comerciais</h2><br>
+    <section class="intro">
+      <p style="text-align: justify;">
+        Na Rede Licitações, representamos empresas que desejam expandir sua atuação no mercado público, mesmo à distância. Atuamos em diversas regiões do Brasil, levando sua proposta com presença estratégica, conhecimento técnico e total conformidade legal. Nosso papel é ser o elo entre sua empresa e as oportunidades locais, garantindo que sua participação em licitações seja eficaz, segura e bem representada onde quer que você esteja.
+      </p>
+    </section>
+  </section>
+  
+  <div class="cards-container">
+    <section class="card">
+      <h2 class="cor">Como funciona nossa atuação</h2><br>
+      <ul>
+        <li>Mapeamos oportunidades alinhadas ao perfil da sua empresa.</li>
+        <li>Analisamos toda a documentação necessária, deixando sua empresa pronta para participar de licitações com segurança.</li>
+        <li>Representamos sua empresa de forma completa em processos licitatórios.</li>
+        <li>Elaboramos e enviamos propostas, garantindo conformidade técnica e competitividade.        </li>
+      </ul>
+    </section>
+  
+    <section class="card">
+      <h2 class="cor">Vantagens de ser representado</h2><br>
+      <ul>
+        <li>Participação estratégica em licitações eletrônicas em todo o Brasil, com mais alcance e competitividade.</li>
+        <li>Equipe especializada em licitações e na Lei nº 14.133/2021, com atuação técnica e segura.</li>
+        <li>Economia de tempo e recursos, enquanto sua empresa foca no que realmente importa.</li>
+        <li>Maior competitividade e chances reais de êxito nas disputas públicas.    </li>
+      </ul>
+    </section>
+  
+    <section class="card">
+      <h2 class="cor">Setores e órgãos atendidos</h2><br>
+      <p class="letra2"> A Rede Licitações oferece assessoria completa para empresas que desejam vender para o setor público, atuando em licitações, dispensas e credenciamentos em todo o Brasil. Atendemos prefeituras, órgãos federais, empresas públicas e demais entes da administração pública. Atuamos com empresas de diversos segmentos, entre eles: </p>
+      <ul>
+        <li class="letra">Serviços médicos e exames (plantões, exames de imagem e laboratoriais)</li>
+        <li class="letra">Fornecimento de refeições (coffee break, almoços e refeições corporativas)</li>
+        <li class="letra">Materiais e equipamentos (escolares, limpeza, eletricos e afins)</li>
+        <li class="letra">Pneus, peças e serviços automotivos (manutenção, troca e fornecimento)</li>
+      </ul>
+      </section>
+
+    <section class="card3">
+      <p style="color: #032d51; text-align:center "> Independentemente do segmento ou da modalidade de licitação, estamos prontos para garantir que sua empresa esteja preparada para competir de forma eficaz, com foco na qualidade e nos resultados.  </p>
+    </section>
+  </div>
+
+      <div class="form-rep">
+      <h2>Solicite sua representação</h2>
+      <p>Preencha o formulário abaixo e entraremos em contato para avaliar sua demanda e viabilidade de representação.</p>
+      <form action="https://formsubmit.co/redelicitacaoja@gmail.com" method="POST">
+        <input type="text" name="_honey" style="display:none">
+        <input type="hidden" name="_captcha" value="false">
+        <label for="empresa">Nome da empresa *</label>
+        <input type="text" name="empresa" id="empresa" required />
+
+        <label for="nome">Nome do responsável *</label>
+        <input type="text" name="nome" id="nome" required />
+
+        <label for="email">E-mail *</label>
+        <input type="email" name="email" id="email" required />
+
+        <label for="segmento">Segmento de atuação *</label>
+        <input type="text" name="segmento" id="segmento" required />
+
+        <label for="mensagem">Mensagem</label>
+        <textarea name="mensagem" id="mensagem" rows="4"></textarea>
+
+        <button type="submit">Solicitar Representação</button>
+      </form>
+    </div>
+
+
+</main>
+
+<footer class="footer">
+  <div class="footer-title">
+    <h2>Conecte-se com a Rede Licitações</h2>
+  </div>
+  <div class="footer-main">
+    <div class="footer-links">
+      <div class="footer-column">
+        <ul>
+          <li><a href="representacao.html">Representações</a></li>
+          <li><a href="../contato.html">Fale conosco</a></li>
+          <li><a href="../sobreNos.html">Quem somos</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <ul>
+          <li><a href="comoparticpar.html">Como participar de licitações</a></li>
+          <li><a href="orcamento.html">Solicite um orçamento</a></li>
+          <li><a href="materiaisGratuitos.html">Materiais gratuitos</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <ul>
+          <li><a href="ebookPago.html">E-book: Guia para vencer no mercado público</a></li>                
+          <li><a href="duvidas.html">Dúvidas frequentes</a></li>
+          <li><a href="https://auniao.pb.gov.br/doe">Notícias do setor</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-social">
+    <p>Acompanhe nossas redes sociais</p>
+    <div class="social-icons">
+      <a href="#"><img src="../img/face.png" alt="Facebook" /></a>
+      <a href="#"><img src="../img/Linkedin.png" alt="LinkedIn" /></a>
+      <a href="https://www.instagram.com/rede.licitacoes?igsh=MWVvcnk3MWMybWpidg%3D%3D&utm_source=qr"><img src="../img/insta.png" alt="Instagram" /></a>
+      <a href="#"><img src="../img/whatsapp.png" alt="WhatsApp" /></a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

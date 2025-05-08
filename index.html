@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" type="image/png" href="img/logoEmpresas/rede (3).png">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    
+    <title>Rede Licitações</title>
+</head>
+<body>
+  <header>
+    <div class="logo-container">
+      <a href="index.html" style="text-decoration: none; color: inherit; display: inline-block;">
+        <img src="./img/logoAzul.png" alt="logo" class="logo-img" />
+        <div class="text-container">
+          <h1>Rede Licitações</h1>
+        </a>
+        <h4>Conquiste mais licitações, preocupe-se menos.</h4>
+      </div>
+  
+      <!-- Botão do menu hamburguer -->
+      <button class="menu-toggle" aria-label="Abrir Menu">&#9776;</button>
+    </div>
+  
+    <!-- Menu de navegação -->
+    <nav class="nav-menu">
+      <a href="index.html">Início</a>
+      <a href="sobreNos.html">Sobre</a>
+      <a href="servicos.html">Serviços</a>
+      <a class="local" href="contato.html">Contato</a>
+    </nav>
+    <script>
+      const toggle = document.querySelector('.menu-toggle');
+      const navMenu = document.querySelector('.nav-menu');
+    
+      toggle.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+      });
+    </script>
+  </header>
+    
+    <div style="position: relative; height: 120vh; background-image: url('./img/predio.jpg'); background-size: cover; background-position: center;">
+      <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: white; text-align: center; background: rgba(0,0,0,0.4); padding: 20px; border-radius: 10px;">
+        <h1>Especialistas em <span style="background-color: #FFA733; padding: 5px 10px; border-radius: 4px;">Licitações</span></h1>
+        <p>Transformamos licitações em conquistas com inteligência, suporte e total segurança em cada etapa.</p>
+      </div>
+    </div>
+          <section class="services">
+              <div id="metrics" style="background-color: #032d51; padding: 30px; border-radius: 10px; display: flex; justify-content: space-around; color: white; flex-wrap: wrap;">
+                <div style="text-align: center; margin: 10px;">
+                  <div class="counter" data-target="6" data-suffix="+ anos" style="font-size: 28px; font-weight: bold;">0</div>
+                  <div style="font-size: 14px;">de experiência em licitações</div>
+                </div>
+                <div style="text-align: center; margin: 10px;">
+                  <div class="counter" data-target="5000" data-suffix="+" style="font-size: 28px; font-weight: bold;">0</div>
+                  <div style="font-size: 14px;">pregões participados</div>
+                </div>
+                <div style="text-align: center; margin: 10px;">
+                  <div class="counter" data-target="75" data-suffix="%" style="font-size: 28px; font-weight: bold;">0</div>
+                  <div style="font-size: 14px;">de índice de aprovação de recursos</div>
+                </div>
+                <div style="text-align: center; margin: 10px;">
+                  <div class="counter" data-target="100" data-suffix="M+" style="font-size: 28px; font-weight: bold;">0</div>
+                  <div style="font-size: 14px;">em contratos públicos vencidos</div>
+                </div>
+              </div>
+              
+              <script>
+                const counters = document.querySelectorAll('.counter');
+                let hasAnimated = false;
+              
+                function animateCounters() {
+                  counters.forEach(counter => {
+                    const target = +counter.getAttribute('data-target');
+                    const suffix = counter.getAttribute('data-suffix') || '';
+                    let count = 0;
+                    const increment = target / 100;
+              
+                    const updateCount = () => {
+                      count += increment;
+                      if (count < target) {
+                        counter.innerText = Math.floor(count) + suffix;
+                        requestAnimationFrame(updateCount);
+                      } else {
+                        counter.innerText = target + suffix;
+                      }
+                    };
+              
+                    updateCount();
+                  });
+                }
+              
+                const observer = new IntersectionObserver(entries => {
+                  entries.forEach(entry => {
+                    if (entry.isIntersecting && !hasAnimated) {
+                      animateCounters();
+                      hasAnimated = true; // garante que anima apenas uma vez
+                    }
+                  });
+                }, {
+                  threshold: 0.7 // dispara quando 70% da div estiver visível
+                });
+              
+                observer.observe(document.getElementById('metrics'));
+              </script>            
+          </section>
+
+      <section class="hero">
+        <h1> Crescer e fazer outras empresas crescerem é a nossa essência. </h1>
+        <p>
+          <strong>Somos especialistas em assessoria completa em licitações públicas</strong> para todos os tipos de serviços e produtos, oferecendo uma gama de soluções, incluindo análise técnica e jurídica, montagem de propostas, defesas administrativas e acompanhamento estratégico em todas as etapas, desde a busca do edital até a adjudicação.
+        </p>
+        <p>
+          Independentemente do <strong>segmento ou ramo de atuação da sua empresa</strong>, estamos prontos para garantir que ela esteja <strong>preparada para competir de forma eficaz</strong>, com foco em <strong>qualidade, segurança e resultados concretos</strong>.
+        </p>
+        <p>
+          Atendemos empresas de diversos setores, como tecnologia, indústrias de manufatura, prestadores de serviços e fornecedores de bens para o setor público, oferecendo <strong>soluções adaptáveis</strong> às necessidades específicas de cada cliente para garantir o sucesso em todas as fases do processo licitatório.
+        </p>
+        <br>
+        <a href="https://wa.me/5583988613922" class="button">Fale com um Consultor</a>
+      </section>
+
+      <div class="carousel-container">
+        <h2 class="carousel-title">Empresas que confiam em nós</h2>
+        <div class="carousel-track">
+          <img src="./img/logoEmpresas/MarcioDiesel.jpeg" alt="Logo 1">
+          <img src="./img/logoEmpresas/PostoD.jpeg" alt="Logo 2">
+          <img src="./img/logoEmpresas/ACpneus.jpeg" alt="Logo 3">
+          <img src="./img/logoEmpresas/LohaoC.jpeg" alt="Logo 4">
+          <img src="./img/logoEmpresas/BrancoBranco.jpeg" alt="Logo 5">
+          <img src="./img/logoEmpresas/GamaI.jpeg" alt="Logo 6">
+          <img src="./img/logoEmpresas/RubensD.jpeg" alt="Logo 7">
+          <img src="./img/logoEmpresas/AgendaG.jpeg" alt="Logo 8">
+          <img src="./img/logoEmpresas/Foop.jpeg" alt="Logo 9">
+          <img src="./img/logoEmpresas/Pneumax.jpeg" alt="Logo 10">
+          <img src="./img/logoEmpresas/Imediata.jpeg" alt="Logo 11">
+          <img src="./img/logoEmpresas/idealP.jpeg" alt="Logo 12">
+          <img src="./img/logoEmpresas/Moderna.jpeg" alt="Logo 13">
+          <img src="./img/logoEmpresas/DivinaF.jpeg" alt="Logo 14">
+          <img src="./img/logoEmpresas/MiranteM.jpeg" alt="Logo 15">
+          <img src="./img/logoEmpresas/OftalmoC.jpeg" alt="Logo 16">
+          <img src="./img/logoEmpresas/Eletroluz.jpeg" alt="Logo 17">
+          <img src="./img/logoEmpresas/aclimp.jpg" alt="Logo 18">
+          <img src="./img/logoEmpresas/SMimpressos.jpeg" alt="Logo 19">
+          <img src="./img/logoEmpresas/Sevylha.jpeg" alt="Logo 20">
+          <img src="./img/logoEmpresas/PalacioN.jpeg" alt="Logo 21">
+          <img src="./img/logoEmpresas/NinoP.jpeg" alt="Logo 22">
+          <img src="./img/logoEmpresas/Zabumba.jpeg" alt="Logo 23">
+          <img src="./img/logoEmpresas/Multimidia.jpeg" alt="Logo 24">
+          <img src="./img/logoEmpresas/ShotGun.jpeg" alt="Logo 25">
+          <img src="./img/logoEmpresas/RochaP.jpeg" alt="Logo 26">
+          <img src="./img/logoEmpresas/jaguar.jpeg" alt="Logo 27">
+          <img src="./img/logoEmpresas/PostoP.jpeg" alt="Logo 28">
+          <img src="./img/logoEmpresas/BemSaude.jpeg" alt="Logo 29">
+          <img src="./img/logoEmpresas/JaspeE.jpeg" alt="Logo 30">
+          <img src="./img/logoEmpresas/Cemed.jpeg" alt="Logo 31">
+          <img src="./img/logoEmpresas/InoveM.jpeg" alt="Logo 32">
+          <img src="./img/logoEmpresas/CIMAC.jpeg" alt="Logo 33">
+          <img src="./img/logoEmpresas/polyL.jpeg" alt="Logo 34">
+          <img src="./img/logoEmpresas/MetalT.jpeg" alt="Logo 35">
+          <img src="./img/logoEmpresas/MasterTruck.jpeg" alt="Logo 36">
+          <img src="./img/logoEmpresas/RafelM.jpeg" alt="Logo 37">
+          <img src="./img/logoEmpresas/QueirogaM.jpeg" alt="Logo 38">
+
+          <!-- Duplicar para loop contínuo -->
+          <img src="./img/logoEmpresas/MarcioDiesel.jpeg" alt="Logo 1">
+          <img src="./img/logoEmpresas/PostoD.jpeg" alt="Logo 2">
+          <img src="./img/logoEmpresas/ACpneus.jpeg" alt="Logo 3">
+          <img src="./img/logoEmpresas/LohaoC.jpeg" alt="Logo 4">
+          <img src="./img/logoEmpresas/BrancoBranco.jpeg" alt="Logo 5">
+          <img src="./img/logoEmpresas/GamaI.jpeg" alt="Logo 6">
+          <img src="./img/logoEmpresas/RubensD.jpeg" alt="Logo 7">
+          <img src="./img/logoEmpresas/AgendaG.jpeg" alt="Logo 8">
+          <img src="./img/logoEmpresas/Foop.jpeg" alt="Logo 9">
+          <img src="./img/logoEmpresas/Pneumax.jpeg" alt="Logo 10">
+          <img src="./img/logoEmpresas/Imediata.jpeg" alt="Logo 11">
+          <img src="./img/logoEmpresas/idealP.jpeg" alt="Logo 12">
+          <img src="./img/logoEmpresas/Moderna.jpeg" alt="Logo 13">
+          <img src="./img/logoEmpresas/DivinaF.jpeg" alt="Logo 14">
+          <img src="./img/logoEmpresas/MiranteM.jpeg" alt="Logo 15">
+          <img src="./img/logoEmpresas/OftalmoC.jpeg" alt="Logo 16">
+          <img src="./img/logoEmpresas/Eletroluz.jpeg" alt="Logo 17">
+          <img src="./img/logoEmpresas/aclimp.jpg" alt="Logo 18">
+          <img src="./img/logoEmpresas/SMimpressos.jpeg" alt="Logo 19">
+          <img src="./img/logoEmpresas/Sevylha.jpeg" alt="Logo 20">
+          <img src="./img/logoEmpresas/PalacioN.jpeg" alt="Logo 21">
+          <img src="./img/logoEmpresas/NinoP.jpeg" alt="Logo 22">
+          <img src="./img/logoEmpresas/Zabumba.jpeg" alt="Logo 23">
+          <img src="./img/logoEmpresas/Multimidia.jpeg" alt="Logo 24">
+          <img src="./img/logoEmpresas/ShotGun.jpeg" alt="Logo 25">
+          <img src="./img/logoEmpresas/RochaP.jpeg" alt="Logo 26">
+          <img src="./img/logoEmpresas/jaguar.jpeg" alt="Logo 27">
+          <img src="./img/logoEmpresas/PostoP.jpeg" alt="Logo 28">
+          <img src="./img/logoEmpresas/BemSaude.jpeg" alt="Logo 29">
+          <img src="./img/logoEmpresas/JaspeE.jpeg" alt="Logo 30">
+          <img src="./img/logoEmpresas/Cemed.jpeg" alt="Logo 31">
+          <img src="./img/logoEmpresas/InoveM.jpeg" alt="Logo 32">
+          <img src="./img/logoEmpresas/CIMAC.jpeg" alt="Logo 33">
+          <img src="./img/logoEmpresas/polyL.jpeg" alt="Logo 34">
+          <img src="./img/logoEmpresas/MetalT.jpeg" alt="Logo 35">
+          <img src="./img/logoEmpresas/MasterTruck.jpeg" alt="Logo 36">
+          <img src="./img/logoEmpresas/RafelM.jpeg" alt="Logo 37">
+          <img src="./img/logoEmpresas/QueirogaM.jpeg" alt="Logo 38">
+        </div>
+      </div>
+    
+      <section class="services">
+        <h2>Nossos Serviços</h2>
+      
+        <div class="service">
+          <h3>Busca de Editais Personalizada</h3>
+          <p>Encontramos oportunidades sob medida para sua empresa, com filtros por área de atuação, região e objeto, garantindo que você dispute apenas licitações compatíveis com seu perfil.</p>
+        </div>
+      
+        <div class="service">
+          <h3>Análise Técnica e Jurídica de Editais</h3>
+          <p>Examinamos editais minuciosamente para identificar riscos, exigências específicas, cláusulas restritivas e oportunidades reais de vitória, conforme a Lei 14.133/21.</p>
+        </div>
+      
+        <div class="service">
+          <h3>Organização da Documentação da Sua Empresa</h3>
+          <p>Cuidamos da estruturação completa da documentação exigida pelo edital, para garantir que você atenda todos os critérios de habilitação com segurança e profissionalismo.</p>
+        </div>
+      
+        <div class="service">
+          <h3>Participação em Pregões (Eletrônicos e Presenciais)</h3>
+          <p>Oferecemos suporte completo e em tempo real durante os pregões, com orientação estratégica em lances, envio de documentos e manifestações.</p>
+        </div>
+      
+        <div class="service">
+          <h3>Recursos Administrativos e Contrarrazões</h3>
+          <p>Elaboramos defesas técnicas e jurídicas contra decisões desfavoráveis e contra recursos apresentados por concorrentes — tudo com base na nova Lei de Licitações.</p>
+        </div>
+
+        <div class="cta-container" style="text-align: center; margin-top: 2rem;">
+          <a href="servicos.html" class="cta-button">Ver Todos os Serviços</a>
+          <a href="https://wa.me/5583988613922" class="cta-button cta-secundario">Fale com um Especialista</a>
+        </div>
+
+      </section>
+
+
+      <footer class="footer">
+        <div class="footer-title">
+          <h2>Conecte-se com a Rede Licitações</h2>
+        </div>
+        <div class="footer-main">
+          <div class="footer-links">
+            <div class="footer-column">
+              <ul>
+                <li><a href="./footer/representacao.html">Representações</a></li>
+                <li><a href="contato.html">Fale conosco</a></li>
+                <li><a href="sobreNos.html">Quem somos</a></li>
+              </ul>
+            </div>
+            <div class="footer-column">
+              <ul>
+                <li><a href="./footer/comoparticpar.html">Como participar de licitações</a></li>
+                <li><a href="./footer/orcamento.html">Solicite um orçamento</a></li>
+                <li><a href="./footer/materiaisGratuitos.html">Materiais gratuitos</a></li>
+              </ul>
+            </div>
+            <div class="footer-column">
+              <ul>
+                <li><a href="./footer/ebookPago.html">E-book: Guia para vencer no mercado público</a></li>                
+                <li><a href="./footer/duvidas.html">Dúvidas frequentes</a></li>
+                <li><a href="https://auniao.pb.gov.br/doe">Notícias do setor</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      
+        <div class="footer-social">
+          <p>Acompanhe nossas redes sociais</p>
+          <div class="social-icons">
+            <a href="#"><img src="./img/face.png" alt="Facebook" /></a>
+            <a href="#"><img src="./img/Linkedin.png" alt="LinkedIn" /></a>
+            <a href="https://www.instagram.com/rede.licitacoes?igsh=MWVvcnk3MWMybWpidg%3D%3D&utm_source=qr"><img src="./img/insta.png" alt="Instagram" /></a>
+            <a href="#"><img src="./img/whatsapp.png" alt="WhatsApp" /></a>
+          </div>
+        </div>
+      </footer>
+</body>
+</html>

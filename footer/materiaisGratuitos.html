@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Materiais Gratuitos | Rede Licitações</title>
+  <link rel="icon" type="image/png" href="img/logoEmpresas/rede (3).png">
+  <link rel="stylesheet" href="materiaisGratuitos.css" />
+</head>
+<body>
+
+  <header>
+    <div class="logo-container">
+      <a href="../index.html" style="text-decoration: none; color: inherit; display: inline-block;">
+        <img src="../img/logoAzul.png" alt="logo" class="logo-img" />
+        <div class="text-container">
+          <h1>Rede Licitações</h1>
+        </a>
+        <h4>Conquiste mais licitações, preocupe-se menos.</h4>
+      </div>
+  
+      <!-- Botão do menu hamburguer -->
+      <button class="menu-toggle" aria-label="Abrir Menu">&#9776;</button>
+    </div>
+  
+    <!-- Menu de navegação -->
+    <nav class="nav-menu">
+      <a href="../index.html">Início</a>
+      <a href="../sobreNos.html">Sobre</a>
+      <a href="../servicos.html">Serviços</a>
+      <a href="../contato.html">Contato</a>
+    </nav>
+    <script>
+      const toggle = document.querySelector('.menu-toggle');
+      const navMenu = document.querySelector('.nav-menu');
+    
+      toggle.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+      });
+    </script>
+  </header>
+
+<main class="container">
+  <h1>Materiais Gratuitos</h1>
+  <p>Aproveite nossos conteúdos gratuitos para aprender mais sobre o mercado de licitações e melhorar seus resultados!</p>
+
+  <div class="cards">
+    <div class="card">
+      <h2>E-book</h2>
+      <h2>Como Começar nas Licitações</h2>
+      <p>Guia prático para iniciantes no mercado público.</p>
+      <button class="btn-download" data-material="ebook">Baixar</button>
+    </div>
+
+    <div class="card">
+      <h2>Checklist</h2>
+      <h2>Documentação Essencial</h2>
+      <p>Verifique se sua empresa está pronta para licitar.</p>
+      <button class="btn-download" data-material="checklist">Baixar</button>
+    </div>
+
+    <div class="card">
+      <h2> Modelo</h2>
+      <h2> Proposta Comercial</h2>
+      <p>Formato padrão de proposta profissional.</p>
+      <button class="btn-download" data-material="modelo">Baixar</button>
+    </div>
+  </div>
+</main>
+
+<!-- Modal -->
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <span class="close" id="closeModal">&times;</span>
+    <h3>Acesse o material</h3>
+    <form class="form-lead" id="formLead">
+      <input type="hidden" name="material" id="materialEscolhido">
+      <input type="hidden" name="_next" id="nextUrl" value="">
+      <input type="hidden" name="_captcha" value="false">
+
+      <label for="nome">Nome *</label>
+      <input type="text" name="nome" id="nome" required>
+    
+      <label for="email">E-mail *</label>
+      <input type="email" name="email" id="email" required>
+      <input type="hidden" name="_subject" value="Nova mensagem do formulário!">
+      <input type="hidden" name="_template" value="box"> <!-- template mais bonito -->
+
+      <button type="submit">Receber material</button>
+  </div>
+</div>
+
+<script>
+  const modal = document.getElementById("modal");
+  const closeModal = document.getElementById("closeModal");
+  const buttons = document.querySelectorAll(".btn-download");
+  const materialInput = document.getElementById("materialEscolhido");
+  const form = document.getElementById("formLead");
+
+  const redirectUrls = {
+    ebook: "./Ebook/e-book1 (1).pdf",
+    checklist: "./downloads/checklist-documentos.pdf",
+    modelo: "./downloads/modelo-proposta.docx"
+  };
+
+  let selectedMaterial = "";
+
+  buttons.forEach(button => {
+    button.addEventListener("click", () => {
+      selectedMaterial = button.getAttribute("data-material");
+      materialInput.value = selectedMaterial;
+      modal.style.display = "block";
+    });
+  });
+
+  closeModal.onclick = () => modal.style.display = "none";
+  window.onclick = (e) => {
+    if (e.target === modal) modal.style.display = "none";
+  };
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault(); // impede o envio automático
+
+    // Aqui você envia os dados do formulário via AJAX ou fetch
+    const formData = new FormData(form);
+
+    fetch("https://formsubmit.co/ajax/pedrojorgemarques12@gmail.com", {
+      method: "POST",
+      body: formData
+    })
+    .then(response => {
+      if (response.ok) {
+        // Após envio, faz o download
+        const link = document.createElement("a");
+        link.href = redirectUrls[selectedMaterial];
+        link.setAttribute("download", "");
+        document.body.appendChild(link);
+        link.click();
+        link.remove();
+
+        modal.style.display = "none";
+        form.reset();
+      } else {
+        alert("Erro ao enviar o formulário.");
+      }
+    })
+    .catch(() => alert("Erro ao enviar. Verifique sua conexão."));
+  });
+</script>
+
+
+<footer class="footer">
+  <div class="footer-title">
+    <h2>Conecte-se com a Rede Licitações</h2>
+  </div>
+  <div class="footer-main">
+    <div class="footer-links">
+      <div class="footer-column">
+        <ul>
+          <li><a href="representacao.html">Representações</a></li>
+          <li><a href="../contato.html">Fale conosco</a></li>
+          <li><a href="../sobreNos.html">Quem somos</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <ul>
+          <li><a href="comoparticpar.html">Como participar de licitações</a></li>
+          <li><a href="orcamento.html">Solicite um orçamento</a></li>
+          <li><a href="materiaisGratuitos.html">Materiais gratuitos</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <ul>
+          <li><a href="ebookPago.html">E-book: Guia para vencer no mercado público</a></li>                
+          <li><a href="duvidas.html">Dúvidas frequentes</a></li>
+          <li><a href="https://auniao.pb.gov.br/doe">Notícias do setor</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-social">
+    <p>Acompanhe nossas redes sociais</p>
+    <div class="social-icons">
+      <a href="#"><img src="../img/face.png" alt="Facebook" /></a>
+      <a href="#"><img src="../img/Linkedin.png" alt="LinkedIn" /></a>
+      <a href="https://www.instagram.com/rede.licitacoes?igsh=MWVvcnk3MWMybWpidg%3D%3D&utm_source=qr"><img src="../img/insta.png" alt="Instagram" /></a>
+      <a href="#"><img src="../img/whatsapp.png" alt="WhatsApp" /></a>
+    </div>
+  </div>
+</footer>
+
+
+
+</body>
+</html>

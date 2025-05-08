@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dúvidas Frequentes | Rede Licitações</title>
+  <link rel="icon" type="image/png" href="img/logoEmpresas/rede (3).png">
+  <link rel="stylesheet" href="duvidas.css" />
+</head>
+
+<body>
+
+  <header>
+    <div class="logo-container">
+      <a href="../index.html" style="text-decoration: none; color: inherit; display: inline-block;">
+        <img src="../img/logoAzul.png" alt="logo" class="logo-img" />
+        <div class="text-container">
+          <h1>Rede Licitações</h1>
+        </a>
+        <h4>Conquiste mais licitações, preocupe-se menos.</h4>
+      </div>
+  
+      <!-- Botão do menu hamburguer -->
+      <button class="menu-toggle" aria-label="Abrir Menu">&#9776;</button>
+    </div>
+  
+    <!-- Menu de navegação -->
+    <nav class="nav-menu">
+      <a href="../index.html">Início</a>
+      <a href="../sobreNos.html">Sobre</a>
+      <a href="../servicos.html">Serviços</a>
+      <a href="../contato.html">Contato</a>
+    </nav>
+    <script>
+      const toggle = document.querySelector('.menu-toggle');
+      const navMenu = document.querySelector('.nav-menu');
+    
+      toggle.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+      });
+    </script>
+  </header>
+
+  <section class="faq-section">
+    <h1>Dúvidas Frequentes</h1>
+
+    <div class="faq-item">
+      <button class="faq-question">O que é uma licitação?</button>
+      <div class="faq-answer">É o processo utilizado pela Administração Pública para contratar produtos ou serviços. Garante que empresas concorram de forma justa e transparente para fornecer ao governo.</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">Minha empresa pode participar de licitações?</button>
+      <div class="faq-answer">Sim! Qualquer empresa — MEI, micro, pequena, média ou grande — pode participar, desde que cumpra os requisitos do edital e esteja regularizada juridicamente e fiscalmente.</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">Quais são os principais documentos exigidos?</button>
+      <div class="faq-answer">
+        - Contrato Social ou Requerimento de Empresário<br>
+        - CNPJ ativo<br>
+        - Certidões negativas (federal, estadual, municipal)<br>
+        - Certidões trabalhista e FGTS<br>
+        - Balanço patrimonial (em alguns casos)<br>
+        - Cadastro no SICAF (para licitações federais)
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">Qual a diferença entre pregão eletrônico e presencial?</button>
+      <div class="faq-answer">Eletrônico: realizado 100% online. Presencial: ocorre fisicamente. Ambos seguem regras similares, mas com procedimentos distintos.</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">Como sei se a licitação é adequada para meu negócio?</button>
+      <div class="faq-answer">Lendo o edital. Ele traz todos os critérios e especificações. A Rede Licitações também pode ajudar na análise estratégica.</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">O que é o SICAF? Preciso estar cadastrado?</button>
+      <div class="faq-answer">É o Sistema de Cadastramento de Fornecedores do Governo Federal. O cadastro é exigido para participar de licitações federais.</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">Preciso ter experiência prévia para vencer licitações?</button>
+      <div class="faq-answer">Nem sempre. Muitos editais não exigem atestados de experiência, especialmente em pregões comuns.</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">O que acontece se eu ganhar uma licitação?</button>
+      <div class="faq-answer">Você será convocado para formalizar a contratação. Após isso, deve cumprir as entregas conforme o edital.</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">Posso contar com apoio especializado?</button>
+      <div class="faq-answer">
+        Sim! A <strong>Rede Licitações</strong> oferece assessoria completa para empresas em todas as etapas do processo. 
+        <a href="https://wa.me/5583988613922">Clique aqui e fale conosco.</a>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const questions = document.querySelectorAll('.faq-question');
+    questions.forEach(btn => {
+      btn.addEventListener('click', () => {
+        btn.classList.toggle('active');
+        const answer = btn.nextElementSibling;
+        answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+      });
+    });
+  </script>
+
+<footer class="footer">
+  <div class="footer-title">
+    <h2>Conecte-se com a Rede Licitações</h2>
+  </div>
+  <div class="footer-main">
+    <div class="footer-links">
+      <div class="footer-column">
+        <ul>
+          <li><a href="representacao.html">Representações</a></li>
+          <li><a href="../contato.html">Fale conosco</a></li>
+          <li><a href="../sobreNos.html">Quem somos</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <ul>
+          <li><a href="comoparticpar.html">Como participar de licitações</a></li>
+          <li><a href="orcamento.html">Solicite um orçamento</a></li>
+          <li><a href="materiaisGratuitos.html">Materiais gratuitos</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <ul>
+          <li><a href="ebookPago.html">E-book: Guia para vencer no mercado público</a></li>                
+          <li><a href="duvidas.html">Dúvidas frequentes</a></li>
+          <li><a href="https://auniao.pb.gov.br/doe">Notícias do setor</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-social">
+    <p>Acompanhe nossas redes sociais</p>
+    <div class="social-icons">
+      <a href="#"><img src="../img/face.png" alt="Facebook" /></a>
+      <a href="#"><img src="../img/Linkedin.png" alt="LinkedIn" /></a>
+      <a href="https://www.instagram.com/rede.licitacoes?igsh=MWVvcnk3MWMybWpidg%3D%3D&utm_source=qr"><img src="../img/insta.png" alt="Instagram" /></a>
+      <a href="#"><img src="../img/whatsapp.png" alt="WhatsApp" /></a>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
