@@ -40,55 +40,94 @@
     </script>
   </header>
 
-<main class="ebook-container">
-  <section class="ebook-topo">
-    <div class="ebook-texto">
-      <h1>Guia para Vencer no Mercado Público</h1>
-      <p>O manual prático e direto que vai transformar sua empresa em uma campeã de licitações.</p>
-      <ul>
-        <li>✅ Estratégias validadas por especialistas</li>
-        <li>✅ Técnicas de análise e preparação</li>
-        <li>✅ Dicas jurídicas e comerciais</li>
-        <li>✅ Exemplos reais e linguagem simples</li>
-      </ul>
-      <a href="https://SEULINKDEPAGAMENTO.com" class="botao-compra">Quero adquirir agora</a>
-    </div>
-    <div class="ebook-capa">
-      <img src="../img/Pagina E-book.png" alt="Capa do E-book: Guia para vencer no mercado público" />
-    </div>
-  </section>
+    <main class="ebook-container">
+      <section class="ebook-topo">
+        <div class="ebook-texto">
+          <h1>(Em breve) Guia para Vencer no Mercado Público – Cadastre-se para ser notificado!</h1>
+          <p>O manual prático e direto que vai transformar sua empresa em uma campeã de licitações está prestes a ser lançado. Cadastre-se e seja o primeiro a saber quando ele estiver disponível!</p>
+          <ul>
+            <li>✅ Estratégias validadas por especialistas</li>
+            <li>✅ Técnicas de análise e preparação</li>
+            <li>✅ Dicas jurídicas e comerciais</li>
+            <li>✅ Exemplos reais e linguagem simples</li>
+          </ul>
+          <a href="#notificacao" class="botao-compra"onclick="rolarPara('notificacao'); return false;">
+            Quero ser notificado quando estiver disponível</a>
+        </div>
+        <div class="ebook-capa">
+          <img src="../img/Pagina E-book.png" alt="Capa do E-book: Guia para vencer no mercado público" />
+        </div>
+      </section>
 
-  <section class="ebook-conteudo">
-    <h2>O que você vai aprender</h2>
-    <ul>
-      <li>📌 Como encontrar licitações com alto potencial</li>
-      <li>📌 Como montar propostas competitivas</li>
-      <li>📌 O que a nova Lei 14.133/2021 muda na sua atuação</li>
-      <li>📌 Como interpretar editais e termos de referência</li>
-    </ul>
-  </section>
+      <section class="ebook-conteudo">
+        <h2>O que você vai aprender</h2>
+        <ul>
+          <li>📌 Como encontrar licitações com alto potencial</li>
+          <li>📌 Como montar propostas competitivas</li>
+          <li>📌 O que a nova Lei 14.133/2021 muda na sua atuação</li>
+          <li>📌 Como interpretar editais e termos de referência</li>
+        </ul>
+      </section>
+    
 
-  <section class="ebook-faq">
-    <h2>Perguntas Frequentes</h2>
-    <div class="faq-item">
-      <h3>É um material para iniciantes?</h3>
-      <p>Sim! O conteúdo é didático, direto e voltado para quem está começando ou quer melhorar seus resultados.</p>
-    </div>
-    <div class="faq-item">
-      <h3>Como recebo o e-book?</h3>
-      <p>Após a confirmação do pagamento, você receberá o link para download diretamente no seu e-mail.</p>
-    </div>
-    <div class="faq-item">
-      <h3>Tem garantia?</h3>
-      <p>Sim. Você tem até 7 dias para solicitar reembolso, caso não esteja satisfeito.</p>
-    </div>
-  </section>
+      <section class="ebook-faq">
+        <h2>Perguntas Frequentes</h2>
+        <div class="faq-item">
+          <h3>É um material para iniciantes?</h3>
+          <p>Sim! O conteúdo é didático, direto e voltado para quem está começando ou quer melhorar seus resultados.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Como recebo o e-book?</h3>
+          <p>Após a confirmação do pagamento, você receberá o link para download diretamente no seu e-mail.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Tem garantia?</h3>
+          <p>Sim. Você tem até 7 dias para solicitar reembolso, caso não esteja satisfeito.</p>
+        </div>
 
-  <section class="ebook-cta-final">
-    <h2>Garanta agora seu acesso ao e-book</h2>
-    <a href="https://SEULINKDEPAGAMENTO.com" class="botao-compra">Adquirir agora</a>
-  </section>
-</main>
+        <div id="notificacao"></div> <!-- Modificação de onde parar -->
+
+        <div class="faq-item">
+          <h3>Quando o e-book estará disponível?</h3>
+          <p>Estamos finalizando os últimos ajustes! Inscreva-se para ser notificado assim que ele for lançado.</p>
+        </div>
+      </section>
+
+    <script>
+    function rolarPara(id) {
+      document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+    }
+  </script>
+
+    <section class="ebook-inscricao">
+      <h2>Cadastre-se para ser notificado sobre o lançamento do e-book!</h2>
+      <form action="https://formsubmit.co/redelicitacaoja@gmail.com" method="POST" id="form-inscricao" onsubmit="mostrarMensagem()">
+      <input type="hidden" name="_captcha" value="false">  
+      <input type="text" name="_honey" style="display:none">  
+      <input type="text" name="nome" placeholder="Seu nome" required />
+        <input type="email" name="email" placeholder="Seu e-mail" required />
+
+        <!-- Proteções e configurações -->
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="#">
+
+        <button type="submit" class="botao-compra">Quero ser notificado quando for lançado</button>
+      </form>
+
+      <div id="mensagem-confirmacao" style="display:none;">
+        <p>Obrigado! Você será notificado assim que o e-book estiver disponível.</p>
+      </div>
+    </section>
+    </main>
+
+    <script>
+  function mostrarMensagem() {
+    setTimeout(() => {
+      document.getElementById('form-inscricao').style.display = 'none';
+      document.getElementById('mensagem-confirmacao').style.display = 'block';
+    }, 500);
+  }
+</script>
 
 <footer class="footer">
   <div class="footer-title">
@@ -133,3 +172,53 @@
 
 </body>
 </html>
+
+<!--<main class="ebook-container">
+  <section class="ebook-topo">
+    <div class="ebook-texto">
+      <h1>Guia para Vencer no Mercado Público </h1>
+      <p>O manual prático e direto que vai transformar sua empresa em uma campeã de licitações.</p>
+      <ul>
+        <li>✅ Estratégias validadas por especialistas</li>
+        <li>✅ Técnicas de análise e preparação</li>
+        <li>✅ Dicas jurídicas e comerciais</li>
+        <li>✅ Exemplos reais e linguagem simples</li>
+      </ul>
+      <a href="https://SEULINKDEPAGAMENTO.com" class="botao-compra">Quero adquirir agora</a>
+    </div>
+    <div class="ebook-capa">
+      <img src="../img/Pagina E-book.png" alt="Capa do E-book: Guia para vencer no mercado público" />
+    </div>
+  </section>
+
+  <section class="ebook-conteudo">
+    <h2>O que você vai aprender</h2>
+    <ul>
+      <li>📌 Como encontrar licitações com alto potencial</li>
+      <li>📌 Como montar propostas competitivas</li>
+      <li>📌 O que a nova Lei 14.133/2021 muda na sua atuação</li>
+      <li>📌 Como interpretar editais e termos de referência</li>
+    </ul>
+  </section>
+
+  <section class="ebook-faq">
+    <h2>Perguntas Frequentes</h2>
+    <div class="faq-item">
+      <h3>É um material para iniciantes?</h3>
+      <p>Sim! O conteúdo é didático, direto e voltado para quem está começando ou quer melhorar seus resultados.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Como recebo o e-book?</h3>
+      <p>Após a confirmação do pagamento, você receberá o link para download diretamente no seu e-mail.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Tem garantia?</h3>
+      <p>Sim. Você tem até 7 dias para solicitar reembolso, caso não esteja satisfeito.</p>
+    </div>
+  </section>
+
+  <section class="ebook-cta-final">
+    <h2>Garanta agora seu acesso ao e-book</h2>
+    <a href="https://SEULINKDEPAGAMENTO.com" class="botao-compra">Adquirir agora</a>
+  </section>
+</main>-->
