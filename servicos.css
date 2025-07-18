@@ -49,7 +49,8 @@
     padding-bottom: 30px;
   }
   
- /* Onome tem alguma alteração e corrigimos com isso abaixo: */ 
+ /* O nome tem alguma alteração e corrigimos com isso abaixo: */ 
+ 
  
   .footer-title h2 {
     font-size: 30px;
@@ -60,4 +61,11 @@
     color: #fff;
   }
 
-
+  @media (max-width: 950px){
+    .footer-title{
+      text-align: center;
+      margin-left: auto;
+      margin-right: 50px;
+    }
+    
+  }

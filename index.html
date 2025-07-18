@@ -226,10 +226,10 @@
 
           if (!carouselTrack || !images) return;
 
-          // Garante que a animação comece rodando
           carouselTrack.style.animationPlayState = 'running';
 
           images.forEach((img) => {
+            // Mouse (desktop)
             img.addEventListener('mouseenter', () => {
               carouselTrack.style.animationPlayState = 'paused';
             });
@@ -237,6 +237,22 @@
             img.addEventListener('mouseleave', () => {
               carouselTrack.style.animationPlayState = 'running';
             });
+
+            // Toque (mobile)
+            img.addEventListener('touchstart', () => {
+              carouselTrack.style.animationPlayState = 'paused';
+            });
+
+            img.addEventListener('touchend', () => {
+              carouselTrack.style.animationPlayState = 'running';
+            });
+          });
+
+          // Garante que ao tocar fora do carrossel, ele volte a rodar
+          document.addEventListener('touchstart', (e) => {
+            if (!e.target.closest('.carousel-track')) {
+              carouselTrack.style.animationPlayState = 'running';
+            }
           });
         });
       </script>
