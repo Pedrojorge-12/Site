@@ -480,6 +480,7 @@ body.menu-open {
   .footer-column a:hover {
     color: #ffffff;
     text-decoration: underline;
+    text-decoration-thickness: 1px;
   }
   
   .footer-social {
