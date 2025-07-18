@@ -286,16 +286,23 @@ body.menu-open {
   display: flex;
   width: max-content;
   animation: scroll 90s linear infinite;
+  animation-play-state: running; /* adiciona segurança extra */
 }
 
 .carousel-track img {
   height: 95px;
   margin: 0 30px;
   margin-bottom: 50px;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
 }
 
 .carousel-track img:hover {
   transform: scale(1.1);
+}
+
+.carousel-container:hover .carousel-track {
+  animation-play-state: paused;
 }
 
 /* Responsivo para tablets e celulares */

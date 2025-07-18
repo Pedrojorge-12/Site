@@ -218,5 +218,28 @@
       <div data-include="footer.html"></div>
         <script src="include.js"></script>
 
+       <!-- Controlando o pause do carrossel -->
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          const carouselTrack = document.querySelector('.carousel-track');
+          const images = carouselTrack?.querySelectorAll('img');
+
+          if (!carouselTrack || !images) return;
+
+          // Garante que a animação comece rodando
+          carouselTrack.style.animationPlayState = 'running';
+
+          images.forEach((img) => {
+            img.addEventListener('mouseenter', () => {
+              carouselTrack.style.animationPlayState = 'paused';
+            });
+
+            img.addEventListener('mouseleave', () => {
+              carouselTrack.style.animationPlayState = 'running';
+            });
+          });
+        });
+      </script>
+
 </body>
 </html>
