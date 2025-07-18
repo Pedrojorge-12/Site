@@ -58,10 +58,9 @@ p {
 
 .mvv-card {
   background-color: white;
-  border-left: 6px solid #4c4a4a27;
   border-radius: 10px;
   padding: 30px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.152);
   display: flex;
   text-align: center;
   flex-direction: column;
