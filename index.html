@@ -10,42 +10,15 @@
     <title>Rede Licitações</title>
 </head>
 <body>
-  <header>
-    <div class="logo-container">
-      <a href="index.html" style="text-decoration: none; color: inherit; display: inline-block;">
-        <img src="./img/logoAzul.png" alt="logo" class="logo-img" />
-        <div class="text-container">
-          <h1>Rede Licitações</h1>
-        </a>
-        <h4>Conquiste mais licitações, preocupe-se menos.</h4>
-      </div>
-  
-      <!-- Botão do menu hamburguer -->
-      <button class="menu-toggle" aria-label="Abrir Menu">&#9776;</button>
-    </div>
-  
-    <!-- Menu de navegação -->
-    <nav class="nav-menu">
-      <a href="index.html">Início</a>
-      <a href="sobreNos.html">Sobre</a>
-      <a href="servicos.html">Serviços</a>
-      <a class="local" href="contato.html">Contato</a>
-    </nav>
-    <script>
-      const toggle = document.querySelector('.menu-toggle');
-      const navMenu = document.querySelector('.nav-menu');
-    
-      toggle.addEventListener('click', () => {
-        navMenu.classList.toggle('active');
-      });
-    </script>
-  </header>
+
+   <div data-include="header.html"></div>
     
     <div style="position: relative; height: 120vh; background-image: url('./img/predio.jpg'); background-size: cover; background-position: center;">
-      <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: white; text-align: center; background: rgba(0,0,0,0.4); padding: 20px; border-radius: 10px;">
+      <div style="position: absolute; top: 40%; left: 50%; transform: translate(-50%, -50%); color: white; text-align: center; background: rgba(0,0,0,0.4); padding: 20px; border-radius: 10px;">
         <h1>Especialistas em <span style="background-color: #f59c27; padding: 3px 10px; border-radius: 4px;">Licitações</span></h1>
         <p>Transformamos licitações em conquistas com inteligência, suporte e total segurança em cada etapa.</p>
       </div>
+      
     </div>
           <section class="services">
               <div id="metrics" style="background-color: #032d51; padding: 30px; border-radius: 10px; display: flex; justify-content: space-around; color: white; flex-wrap: wrap;">
@@ -76,7 +49,7 @@
                     const target = +counter.getAttribute('data-target');
                     const suffix = counter.getAttribute('data-suffix') || '';
                     let count = 0;
-                    const increment = target / 100;
+                    const increment = target / 150;
               
                     const updateCount = () => {
                       count += increment;
@@ -94,13 +67,12 @@
               
                 const observer = new IntersectionObserver(entries => {
                   entries.forEach(entry => {
-                    if (entry.isIntersecting && !hasAnimated) {
+                    if (entry.isIntersecting) {
                       animateCounters();
-                      hasAnimated = true; // garante que anima apenas uma vez
                     }
                   });
                 }, {
-                  threshold: 0.7 // dispara quando 70% da div estiver visível
+                  threshold: 0.7
                 });
               
                 observer.observe(document.getElementById('metrics'));
@@ -243,46 +215,8 @@
 
       </section>
 
+      <div data-include="footer.html"></div>
+        <script src="include.js"></script>
 
-      <footer class="footer">
-        <div class="footer-title">
-          <h2>Conecte-se com a Rede Licitações</h2>
-        </div>
-        <div class="footer-main">
-          <div class="footer-links">
-            <div class="footer-column">
-              <ul>
-                <li><a href="./footer/representacao.html">Representações</a></li>
-                <li><a href="contato.html">Fale conosco</a></li>
-                <li><a href="sobreNos.html">Quem somos</a></li>
-              </ul>
-            </div>
-            <div class="footer-column">
-              <ul>
-                <li><a href="./footer/comoparticpar.html">Como participar de licitações</a></li>
-                <li><a href="./footer/orcamento.html">Solicite um orçamento</a></li>
-                <li><a href="./footer/materiaisGratuitos.html">Materiais gratuitos</a></li>
-              </ul>
-            </div>
-            <div class="footer-column">
-              <ul>
-                <li><a href="./footer/ebookPago.html">E-book: Guia para vencer no mercado público</a></li>                
-                <li><a href="./footer/duvidas.html">Dúvidas frequentes</a></li>
-                <li><a href="https://auniao.pb.gov.br/doe">Notícias do setor</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      
-        <div class="footer-social">
-          <p>Acompanhe nossas redes sociais</p>
-          <div class="social-icons">
-            <a href="#"><img src="./img/face.png" alt="Facebook" /></a>
-            <a href="#"><img src="./img/linkedin.png" alt="LinkedIn" /></a>
-            <a href="https://www.instagram.com/rede.licitacoes?igsh=MWVvcnk3MWMybWpidg%3D%3D&utm_source=qr"><img src="./img/insta.png" alt="Instagram" /></a>
-            <a href="#"><img src="./img/whatsapp.png" alt="WhatsApp" /></a>
-          </div>
-        </div>
-      </footer>
 </body>
 </html>
