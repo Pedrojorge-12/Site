@@ -13,6 +13,7 @@
   }
   h2 {
     color: #fff;
+    margin-top: 70px;
     margin-bottom: 20px;
   }
   form {
@@ -65,4 +66,16 @@
 
   .whatsapp-button:hover {
     background-color: #10a647;
+  }
+
+  @media (max-width: 1250px) {
+  .contato-info {
+    margin: 10 auto;
+    text-align: center;
+  }
+
+  .whatsapp-button {
+    margin: 50px;
+  }
+
   }
